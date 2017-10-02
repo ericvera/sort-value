@@ -15,46 +15,26 @@ Install the module:
 npm install sort-value --save
 ```
 
-### ES6
 ```js
-import nameInitials from 'sort-value';
-
-const initials = nameInitials('John Smith');
-
-console.log(initials);
-// Output: JS
+sortValue(after, before);
 ```
+Returns a value between the after and before.
 
-### Pre-ES6
 ```js
-var nameInitials = require('sort-value');
+import sortValue from 'sort-value';
 
-var initials = nameInitials('John Smith');
+const value = sortValue(0, 1);
 
-console.log(initials);
-// Output: JS
+console.log(value);
+// Output: 0.5
 ```
 
 # Input => Output
-* E. => E
-* Eric => E
-* E. Vera => EV
-* Eric V. => EV
-* Eric A. E. => EA
-* Eric A. E. Vera => EV
-* Eric A. Vera => EV
-* Eric A. Vera Perez => EV
-* Eric Vera-Perez => EV
-* Eric A. Vera-Perez => EV
-* Eric Vera Perez => EV
-* Eric A. de Vera Perez => ED
-* Eric A. de Vera-Perez => ED
-* Eric A. Perez-de Vera => EP
-* Eric A. Perez de Vera => EP
-* Eric (Instructor Somewhere) => E
-* Éric Vera => ÉV
-* Vera-Perez => VP
-* Eric "No Nickname" Vera => E
+* undefined, 0 => -1
+* 0, undefined => 1
+* 0, 1 => 0.5
+* 0, 0.5 => 0.3
+* 0, 0.1 => 0.05
 
 # License
 [MIT](https://github.com/ericvera/sort-value/blob/master/LICENSE)
