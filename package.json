@@ -5,7 +5,7 @@
   "main": "lib/sort-value.js",
   "scripts": {
     "build": "babel src --out-dir lib --source-maps inline",
-    "prepublish": "npm test",
+    "prepare": "npm test",
     "test": "npm run build && jest --coverage"
   },
   "repository": "git+https://github.com/ericvera/sort-value.git",
